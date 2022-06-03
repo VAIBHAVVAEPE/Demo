@@ -18,88 +18,104 @@ namespace demo
             string u = Console.ReadLine();
             int uscore = 0;
             int cscore = 0;
+            string Rock, Paper, Scissor;
 
-
-            for (int i = 0; i <= 4; i++)
+            
+            for (int j = 0; j <= 5; j++)
             {
                 Console.WriteLine("Give an input from Rock/ Paper/ Scissor");
                 string use;
                 user = Console.ReadLine();
 
-                
-               // user = use.ToUpper();
-
-
-                Random rnd = new Random();
-                int randomNumber = rnd.Next(1, 4);
-
-                if (randomNumber == 1)
+                if (user == "Rock" || user == "Paper" || user == "Scisssor")
                 {
-                    Console.WriteLine("Comp Choice ==Paper");
+                    for (int i = 0; i<1; i++)
+                    {
+                        // user = use.ToUpper();
 
-                    if (user == "Paper")
-                    {
-                        Console.WriteLine(u + " draw");
-                        uscore++; cscore++;
+
+                        Random rnd = new Random();
+                        int randomNumber = rnd.Next(1, 4);  //123
+
+                        if (randomNumber == 1)
+                        {
+                            Console.WriteLine("Comp Choice ==Paper");
+
+                            if (user == "Paper")
+                            {
+                                Console.WriteLine(u + " draw");
+                                uscore++; cscore++;
+                            }
+                            else if (user == "Rock")
+                            {
+                                Console.WriteLine(u + " you lost");
+                                cscore++;
+                            }
+                            else if (user == "Scissor")
+                            {
+                                Console.WriteLine(u + " you win");
+                                uscore++;
+                            }
+
+                        }
+                        if (randomNumber == 2)
+                        {
+                            Console.WriteLine("Comp ==Rock");
+
+                            if (user == "Paper")
+                            {
+                                Console.WriteLine(u + " You win");
+                                uscore++;
+                            }
+                            else if (user == "Rock")
+                            {
+                                Console.WriteLine(u + " you draw");
+                                uscore++; cscore++;
+                            }
+                            else if (user == "Scissor")
+                            {
+                                Console.WriteLine(u + " you lost");
+                                cscore++;
+                            }
+
+                        }
+                        if (randomNumber == 3)
+                        {
+                            Console.WriteLine("Comp ==Scissor");
+
+
+                            if (user == "Paper")
+                            {
+                                Console.WriteLine(u + " You lost");
+                                cscore++;
+                            }
+                            else if (user == "Rock")
+                            {
+                                Console.WriteLine(u + " you win");
+                                uscore++;
+                            }
+                            else if (user == "Scissor")
+                            {
+                                Console.WriteLine(u + " you draw");
+                                cscore++;
+                                uscore++;
+                            }
+
+                        }
+
+
                     }
-                    else if (user == "Rock")
-                    {
-                        Console.WriteLine(u + " you lost");
-                        cscore++;
-                    }
-                    else if (user == "Scissor")
-                    {
-                        Console.WriteLine(u + " you win");
-                        uscore++;
-                    }
+
 
                 }
-                if (randomNumber == 2)
+                else
                 {
-                    Console.WriteLine("Comp ==Rock");
-
-                    if (user == "Paper")
-                    {
-                        Console.WriteLine(u + " You win");
-                        uscore++;
-                    }
-                    else if (user == "Rock")
-                    {
-                        Console.WriteLine(u + " you draw");
-                        uscore++; cscore++;
-                    }
-                    else if (user == "Scissor")
-                    {
-                        Console.WriteLine(u + " you lost");
-                        cscore++;
-                    }
+                    Console.WriteLine("invalid entry");
 
                 }
-                if (randomNumber == 3)
-                {
-                    Console.WriteLine("Comp ==Scissor");
-
-
-                    if (user == "Paper")
-                    {
-                        Console.WriteLine(u + " You lost");
-                        cscore++;
-                    }
-                    else if (user == "Rock")
-                    {
-                        Console.WriteLine(u + " you win");
-                        uscore++;
-                    }
-                    else if (user == "Scissor")
-                    {
-                        Console.WriteLine(u + " you draw");
-                        cscore++;
-                        uscore++;
-                    }
-
-                }
-
             }
+
+            
             Console.WriteLine(u +" SCore== "+uscore);
             Console.WriteLine("Computer SCore== " + cscore);
             

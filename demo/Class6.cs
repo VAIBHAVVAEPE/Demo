@@ -25,23 +25,8 @@ namespace demo
                 userInput =Console.ReadLine();
                 //userInput = Input.ToUpper();
 
-
-
-
-
-                //Console.Write("Give an input from Rock/ Paper/ Scissor ");
-
-                //userInput = Console.ReadLine();
-
-
-
                 Random rnd = new Random();
-
                 randomNum = rnd.Next(1, 4);
-
-
-
-
                 switch (randomNum)
 
                 {

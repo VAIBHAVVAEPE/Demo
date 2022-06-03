@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>demo.Program11</StartupObject>
+    <StartupObject>demo.Class7</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
