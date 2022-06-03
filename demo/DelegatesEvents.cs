@@ -42,6 +42,7 @@ namespace demo
         }
         static void Main(string[] args)
         {
+            //this is method
             Student s1 = new Student();
             s1.Fail += new Mydel(FailMsg);
             s1.Distinction += new Mydel(DistinctionMsg);
